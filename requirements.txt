@@ -1,0 +1,19 @@
+# Essential Libraries
+pandas            # For data manipulation and cleaning
+numpy             # For numerical operations
+requests          # For API requests to OpenFoodFacts API
+
+# Data Visualization
+matplotlib        # For plotting charts
+seaborn           # For advanced visualizations
+plotly            # Interactive visualizations
+
+# Dashboards & Web Apps
+streamlit         # For building interactive web applications (Streamlit dashboard)
+streamlit-option-menu  # For creating option menus in Streamlit apps
+
+# Database Interaction
+psycopg2          # PostgreSQL adapter (if using PostgreSQL)
+
+# Jupyter for notebooks
+jupyter           # For running Jupyter notebooks or JupyterLab

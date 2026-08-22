@@ -1,0 +1,108 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+
+# =========================
+# Jupyter Notebook
+# =========================
+
+.ipynb_checkpoints/
+
+
+# =========================
+# Environment & Secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+
+# =========================
+# PostgreSQL / Database
+# =========================
+
+*.sql.gz
+*.dump
+*.backup
+
+
+# =========================
+# Python Tools
+# =========================
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# =========================
+# IDE / Editors
+# =========================
+
+.vscode/
+.idea/
+
+# VS Code settings
+*.code-workspace
+
+
+# =========================
+# OS Files
+# =========================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+
+# =========================
+# Temporary Files
+# =========================
+
+*.tmp
+*.temp
+*.bak
+
+
+# =========================
+# Build / Distribution
+# =========================
+
+build/
+dist/
+*.egg-info/
+
+
+# =========================
+# Optional: Large Generated Files
+# =========================
+
+# Uncomment these if you don't want large datasets
+# chococrunch_raw.csv
+# chococrunch_final.csv
