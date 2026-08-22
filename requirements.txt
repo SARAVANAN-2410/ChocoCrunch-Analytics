@@ -17,3 +17,5 @@ psycopg2          # PostgreSQL adapter (if using PostgreSQL)
 
 # Jupyter for notebooks
 jupyter           # For running Jupyter notebooks or JupyterLab
+
+python-dotenv
