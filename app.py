@@ -220,7 +220,7 @@ elif option == "Join Queries":
             SELECT p.product_code,p.product_name,p.brand,d.calorie_category,d.sugar_category
             FROM product_info AS p JOIN derived_metrics AS d
             ON p.product_code = d.product_code
-            WHERE d.calorie_category = 'High'
+            WHERE d.calorie_category = 'High Calories'
             AND d.sugar_category = 'High Sugar' AND p.brand <> 'Missing';
         """,
 
