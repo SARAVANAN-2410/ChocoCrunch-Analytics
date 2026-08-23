@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Connect DB
+
 conn = psycopg2.connect(
     host=os.getenv("DB_HOST"),
     port=os.getenv("DB_PORT"),
@@ -99,9 +100,7 @@ elif option == "Nutrient Info":
 
         "Average carbohydrates_value per product": """
             SELECT product_code, AVG(carbohydrates_value) AS average_carbohydrates
-            FROM nutrient_info
-            GROUP BY product_code
-            ORDER BY product_code ;
+            FROM nutrient_info ORDER BY product_code ;
         """,
 
         "Products with sodium_value > 1g": """
@@ -160,7 +159,7 @@ elif option == "Derived Metrics":
 
         " Products that are both High Calorie and High Sugar": """
             SELECT product_code,calorie_category,sugar_category
-            FROM derived_metrics WHERE calorie_category = 'High'
+            FROM derived_metrics WHERE calorie_category = 'High Calories'
             AND sugar_category = 'High Sugar' ;
         """,
 
@@ -196,7 +195,7 @@ elif option == "Join Queries":
         "Top 5 brands with most High Calorie products": """
             SELECT p.brand, COUNT(*) AS high_calorie_product_count FROM product_info AS p
             JOIN derived_metrics AS d ON p.product_code = d.product_code
-            WHERE d.calorie_category = 'High' AND p.brand <> 'Missing'
+            WHERE d.calorie_category = 'High Calories' AND p.brand <> 'Missing'
             GROUP BY p.brand ORDER BY high_calorie_product_count DESC
             LIMIT 5 ;
         """,
