@@ -100,7 +100,8 @@ elif option == "Nutrient Info":
 
         "Average carbohydrates_value per product": """
             SELECT product_code, AVG(carbohydrates_value) AS average_carbohydrates
-            FROM nutrient_info ORDER BY product_code ;
+            FROM nutrient_info group BY product_code
+            ORDER BY product_code ;
         """,
 
         "Products with sodium_value > 1g": """
