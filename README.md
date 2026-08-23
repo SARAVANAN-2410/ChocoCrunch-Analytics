@@ -436,7 +436,6 @@ It particularly demonstrates the ability to work with **relational databases, an
 
 **Data Science & Python Enthusiast**
 
-📍 Chennai, Tamil Nadu, India
 
 GitHub: [SARAVANAN-2410](https://github.com/SARAVANAN-2410)
 
