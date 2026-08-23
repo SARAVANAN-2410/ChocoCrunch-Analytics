@@ -8,13 +8,13 @@ The project transforms food product data into a structured PostgreSQL database, 
 
 ## 📊 Dashboard Preview
 
-![ChocoCrunch Analytics Dashboard](screenshots/dashboard.png)
+![ChocoCrunch Analytics Dashboard](screenshots/join-queries-brands.png)
 
 ## 🔗 SQL Join Query Results
 
 ![Top 5 Products by Sugar-to-Carb Ratio](screenshots/join-queries-ratio.png)
 
-![Top 5 Brands by High Calorie Products](screenshots/join-queries-brands.png)
+![Top 5 Brands by High Calorie Products](screenshots/dashboard.png)
 
 ---
 

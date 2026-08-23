@@ -154,8 +154,8 @@ elif option == "Derived Metrics":
         """,
 
         "Average sugar_to_carb_ratio for High Calorie products": """
-        SELECT AVG(sugar_to_carb_ratio) AS average_ratio FROM derived_metrics
-        WHERE calorie_category = 'High Calorie' AND sugar_to_carb_ratio NOT IN ('Infinity', '-Infinity');
+            SELECT AVG(sugar_to_carb_ratio) AS average_ratio FROM derived_metrics
+            WHERE calorie_category = 'High Calories';
         """,
 
         " Products that are both High Calorie and High Sugar": """
@@ -170,15 +170,13 @@ elif option == "Derived Metrics":
         """,
 
         " Products with sugar_to_carb_ratio > 0.7": """
-            SELECT product_code, sugar_to_carb_ratio FROM derived_metrics WHERE sugar_to_carb_ratio > 0.7
-            AND sugar_to_carb_ratio NOT IN ('Infinity', '-Infinity')
-            ORDER BY sugar_to_carb_ratio DESC ;
+            SELECT product_code, sugar_to_carb_ratio FROM derived_metrics
+            WHERE sugar_to_carb_ratio > 0.7 ORDER BY sugar_to_carb_ratio DESC;
         """,
 
         " Average sugar_to_carb_ratio per calorie_category": """
-        SELECT calorie_category, AVG(sugar_to_carb_ratio) AS average_ratio
-        FROM derived_metrics WHERE sugar_to_carb_ratio NOT IN ('Infinity', '-Infinity')
-        GROUP BY calorie_category ORDER BY average_ratio DESC;
+            SELECT calorie_category, AVG(sugar_to_carb_ratio) AS average_ratio FROM derived_metrics
+            GROUP BY calorie_category ORDER BY average_ratio DESC;
         """
     }
 
@@ -248,10 +246,9 @@ elif option == "Join Queries":
         """,
 
         "Top 5 products by sugar_to_carb_ratio with their calorie and sugar category": """
-            SELECT p.product_code,p.product_name,p.brand,d.sugar_to_carb_ratio,d.calorie_category,d.sugar_category
-            FROM product_info p JOIN derived_metrics d ON p.product_code = d.product_code
-            WHERE d.sugar_to_carb_ratio NOT IN ('Infinity', '-Infinity') ORDER BY d.sugar_to_carb_ratio DESC
-            LIMIT 5 ;
+           SELECT p.product_code, p.product_name, p.brand, d.sugar_to_carb_ratio, d.calorie_category, d.sugar_category
+           FROM product_info p JOIN derived_metrics d ON p.product_code = d.product_code
+            ORDER BY d.sugar_to_carb_ratio DESC LIMIT 5;
         """
     }
 
